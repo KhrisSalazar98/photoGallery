@@ -14,3 +14,17 @@ input:focus {
 .modal-header, .modal-footer {
     border: none;
 }
+
+.modal-content, .modal-body {
+    background-color: $color_secundario;
+}
+
+.modal-content {
+    -webkit-box-shadow: 0px 0px 15px -4px $color_principal;
+    box-shadow: 0px 0px 15px -4px $color_principal;
+}
+
+.modal-body {
+    padding: 0.5rem;
+    
+}

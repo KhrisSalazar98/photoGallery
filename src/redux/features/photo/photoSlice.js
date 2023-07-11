@@ -28,7 +28,7 @@ export const searchPhotos = createAsyncThunk(
     async (searchData, { rejectWithValue }) => {
 
         const route = `https://api.unsplash.com/photos/?per_page=30&${apiKey}`;
-        const routeWithSearch = `https://api.unsplash.com/search/photos/?query=${searchData}&per_page=30&${apiKey}`;
+        const routeWithSearch = `https://api.unsplash.com/search/photos/?query=${encodeURI(searchData)}&per_page=30&${apiKey}`;
 
         const response = await fetch(searchData !== "" ? routeWithSearch : route);
 
