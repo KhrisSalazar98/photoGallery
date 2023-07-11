@@ -6,3 +6,11 @@ body {
 input:focus {
     outline: none;
 }
+
+.input_search::placeholder {
+    font-style: italic;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}

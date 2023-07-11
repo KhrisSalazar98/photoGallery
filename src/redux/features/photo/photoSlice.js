@@ -4,7 +4,7 @@ export const readPhotos = createAsyncThunk(
     "readPhotos",
     async (args, { rejectWithValue }) => {
         const response = await fetch(
-
+            "https://api.unsplash.com/photos/?per_page=30&client_id=SK8XqDfiMu0D2UBGhMXLlKwwMjv4lGNUN6CqNWdf2v0"
         );
 
         try {
