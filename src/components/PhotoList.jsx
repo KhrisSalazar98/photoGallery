@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 
-import { readPhotos } from '../redux/features/photo/photoSlice';
+import { readPhotos, searchPhotos } from '../redux/features/photo/photoSlice';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 import Loading from './Loading';
 
@@ -14,7 +14,7 @@ const PhotoList = () => {
 
     const dispatch = useDispatch();
 
-    const {photoData, loading, searchString} = useSelector((state) => state.photo);
+    const {photoData, loading} = useSelector((state) => state.photo);
 
     useEffect(() => {
         dispatch(readPhotos());
@@ -22,12 +22,15 @@ const PhotoList = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        dispatch(searchPhotos(search));
+        setSearch("");
         
     }
 
 
     return (
         <>
+            
             {loading ? (
                 <Loading />
             ):
@@ -43,14 +46,19 @@ const PhotoList = () => {
                         <br />
 
                         <div className='row mt-lg-5'>
-                            {photoData &&
+                            {
+                                photoData && photoData.length >= 1 ?
 
-                                photoData
-                                .map((photo, index) => (
-                                    <div key={index} className='col-2 col-sm-2 col-lg-2 mb-2 px-0 d-flex justify-content-center'>
-                                        <img className='rounded-2 img_regular' src={photo.urls.regular} alt={index} />
-                                    </div>
-                                ))
+                                    photoData
+                                    .map((photo, index) => (
+                                        <div key={index} className='col-2 col-sm-2 col-lg-2 mb-2 px-0 d-flex justify-content-center'>
+                                            <img className='rounded-2 img_regular' src={photo.urls.regular} alt={index} />
+                                        </div>
+                                    ))
+                                :(
+                                    <p className='text-center txt_not_found'><FontAwesomeIcon size="xl" className='me-1' icon={faCircleExclamation} />No se han encontrado resultado de búsqueda.</p>
+                                )
+                                
                             }
                         </div>
 

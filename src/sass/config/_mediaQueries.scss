@@ -3,6 +3,17 @@
         width: 25px;
         height: 25px;
     }
+
+    .modalContainer {
+        width: 160px;
+        height: 150px;
+    }
+
+    .custom-loader {
+        width:50px;
+        height:50px;
+    }
+
 }
 
 @media (min-width: 220px) {
@@ -37,6 +48,11 @@
     .img_regular {
         width: 50px;
         height: 50px;
+    }
+
+    .modalContainer {
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -101,12 +117,32 @@
         width: 150px;
         height: 150px;
     }
+
+    .modalContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .custom-loader {
+        width:100px;
+        height:100px;
+    }
+
+    .txt_loading {
+        font-size: 20px;
+    }
+
 }
 
 @media (min-width: 1200px) {
     .img_regular {
         width: 180px;
         height: 180px;
+    }
+
+    .modalContainer {
+        width: 400px;
+        height: 400px;
     }
 }
 
