@@ -11,6 +11,7 @@ const ModalViewPhoto = ({photo}) => {
                     </div>
                     <div className="modal-body rounded-3 d-flex justify-content-center">
                         <img className='img_modal' src={photo.urls.regular} alt={photo.id} />
+                        
                     </div>
                     <div className='modal-footer'>
 

@@ -52,18 +52,15 @@ const PhotoList = () => {
 
                                     photoData
                                     .map((photo, index) => (
-                                        <>
-                                            <div key={index} className='col-2 col-sm-2 col-lg-2 mb-2 px-0 d-flex justify-content-center'>
-                                                <button className='bg-transparent border-0' type="button" data-bs-toggle="modal" data-bs-target={`#modalViewPhoto_${photo.id}`}>
-                                                    <img className='rounded-2 img_regular' src={photo.urls.regular} alt={index} />
-                                                </button> 
+                                        
+                                        <div key={index} className='col-2 col-sm-2 col-lg-2 mb-2 px-0 d-flex justify-content-center'>
+                                            <button className='bg-transparent border-0' type="button" data-bs-toggle="modal" data-bs-target={`#modalViewPhoto_${photo.id}`}>
+                                                <img className='rounded-2 img_regular' src={photo.urls.regular} alt={index} />
+                                            </button> 
 
-                                                <ModalViewPhoto photo={photo} /> 
-                                            </div>
-                                        
+                                            <ModalViewPhoto photo={photo} /> 
+                                        </div>
                                             
-                                        </>
-                                        
                                     ))
                                 :(
                                     <p className='text-center txt_not_found'><FontAwesomeIcon size="xl" className='me-1' icon={faCircleExclamation} />No se han encontrado resultados de búsqueda.</p>
