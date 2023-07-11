@@ -37,7 +37,9 @@ const PhotoList = () => {
             ):
                 <>
                     <div className='container my-5'>
-            
+
+
+                        {/* Formulario de búsqueda */}
                         <div className="mb-3 my-lg-5">
                             <form onSubmit={handleSubmit} className='d-flex justify-content-center' >
                                 <input onChange={(e) => setSearch(e.target.value)} className="border-0 px-2 px-sm-3 py-2 rounded-start w-75 input_search" type="text" placeholder='Buscar por nombre' />
@@ -46,6 +48,7 @@ const PhotoList = () => {
                         </div>
                         <br />
 
+                        {/* Listado de elementos */}
                         <div className='row mt-lg-5'>
                             {
                                 photoData && photoData.length >= 1 ?
