@@ -7,6 +7,11 @@ input:focus {
     outline: none;
 }
 
+button:focus:not(:focus-visible) {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 .input_search::placeholder {
     font-style: italic;
 }

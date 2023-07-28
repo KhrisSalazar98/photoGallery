@@ -1,7 +1,7 @@
 header {
     -webkit-box-shadow: $sombra_nav; 
     box-shadow: $sombra_nav;
-    background: linear-gradient(90deg, $color_principal 50%, $color_terciario 100%);
+    background: $color_principal;
 }
 
 header h1 {

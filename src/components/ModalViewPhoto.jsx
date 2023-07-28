@@ -7,11 +7,10 @@ const ModalViewPhoto = ({photo}) => {
                 <div className="modal-content">
                     <div className="modal-header">
               
-                        <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" className="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body rounded-3 d-flex justify-content-center">
-                        <img className='img_modal' src={photo.urls.regular} alt={photo.id} />
-                        
+                        <img className='rounded-1 img_modal' src={photo.urls.regular} alt={photo.id} />
                     </div>
                     <div className='modal-footer'>
 

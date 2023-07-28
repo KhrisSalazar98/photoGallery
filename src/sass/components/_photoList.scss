@@ -14,17 +14,17 @@
 
 .btn_search {
     background-color: $color_principal;
-    color: $color_terciario;
+    color: $blanco;
     -webkit-box-shadow: $sombra_btn_search; 
     box-shadow: $sombra_btn_search;
     @include transition_elements();
 }
 
 .btn_search:hover {
-    filter: brightness(350%);
+    filter: brightness(120%);
 }
 
-.img_regular {
+.img_regular, .img_modal {
     -webkit-box-shadow: $sombra_btn;
     box-shadow: $sombra_btn;
     @include transition_elements();

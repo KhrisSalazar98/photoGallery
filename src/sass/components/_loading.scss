@@ -11,6 +11,12 @@
     z-index: 99;
     opacity: 0.8;
 }
+
+.txt_loading {
+    color: $color_terciario;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
   
 .modalContainer {
     background-color: $color_secundario;

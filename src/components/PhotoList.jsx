@@ -31,7 +31,7 @@ const PhotoList = () => {
 
     return (
         <>
-            
+        
             {loading ? (
                 <Loading />
             ):
